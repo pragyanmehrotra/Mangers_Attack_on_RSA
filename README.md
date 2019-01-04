@@ -12,4 +12,4 @@ python manger_attack.py
 before running the code manger_attack.py
 Note :- rsa.py is not needed it was just implemented to test the functioning of the attack.
 Therefore you need to change the value of n and e in the script to your custom input of rsa modulus and rsa public exponent
-Moreover if you understand what all conditions must be met before performing a manger's attack you'd need an oracle function which returns true if (c^d)%n >= B else false now obviously we won't have access to the private exponent 'd' but we might have access to the decryption which obviously doesn't return the decrypted version of the ciphertext we want decrypted thus feel free to customize the function oracle as you may like
+Moreover if you understand what all conditions must be met before performing a manger's attack you'd need an oracle function which returns true if (query^d)%n >= B else false now obviously we won't have access to the private exponent 'd' but we might have access to the decryption which obviously doesn't return the decrypted version of the ciphertext we want decrypted thus feel free to customize the function oracle as you may like
