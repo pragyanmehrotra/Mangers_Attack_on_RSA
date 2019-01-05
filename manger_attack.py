@@ -1,12 +1,13 @@
-import math
-from rsa import decrypt,enc,rsa #for testing purposes only remove it while usage
+#RSA module is imported for testing purposes only, You may remove this line before Usage
+from rsa import decrypt,enc,rsa
 
+import math
 
 #decrypt function returns pow(c,d,n) or c**d % n where d is the private exponent
 #obviously we couldn't directly decrypt the encrypted flag
 #so we need an oracle to tell us wether after decrypting a certain integer it's > or < B
 
-#CODE DECRYPT FUNCTION BEFORE RUNNING 
+#TODO WRITE DECRYPT FUNCTION BEFORE RUNNING 
 
 def oracle(c,B):
 	'''
@@ -40,7 +41,7 @@ e = rsa.e #plug-in the RSA public exponent e usually 3,65537
 k = int(math.ceil(math.log(n,256)))
 B = pow(2,8*(k-1))
 #print B
-c = enc
+c = enc #plug-in your ciphertext as an integer if it's plaintext use int(16,ciphertext.encode('hex'))
 print c
 i=0
 #query variable denotes the integer which needs to be passed to the oracle 
